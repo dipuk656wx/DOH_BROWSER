@@ -31,7 +31,8 @@ app.whenReady().then(() => {
   app.configureHostResolver({
     secureDnsMode: 'secure', 
     secureDnsServers: [
-      'https://cloudflare-dns.com/dns-query', 
+      'https://1.12.12.12/dns-query',
+      'https://chrome.cloudflare-dns.com/dns-query', 
       'https://dns.google/dns-query', 
     ],
   });
