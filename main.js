@@ -9,12 +9,12 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      devTools: !app.isPackaged,
+      devTools: true,
     },
   });
   win.removeMenu();
   win.loadURL('https://theporndude.com/');
-  
+  win.webContents.openDevTools();
   win.webContents.setWindowOpenHandler(({ url }) => {
     win.loadURL(url);
     return { action: 'deny' };
